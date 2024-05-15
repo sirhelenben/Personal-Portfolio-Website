@@ -181,12 +181,34 @@ section{
   position: relative;
   padding-left: 2rem;
 }
-.edu-content .content{
+.edu-box .edu-content::before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  left:-1.1rem;
+  background: var(--text-color);
+  border-radius: 50%;
+}
+.edu-content .content {
   position: relative;
   padding: 1.5rem;
-  border: .2rem solid --text-color;
+  border: 2rem solid var(--text-color);
   border-radius:  .6rem;
   margin-bottom: 2rem;
+  overflow: hidden;
+}
+.edu-content .content::before{
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: red;
+ z-index: -1;
 }
 .edu-content .content .year {
   padding-right: .5rem;
